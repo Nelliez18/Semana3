@@ -1,30 +1,21 @@
 Módulo calculadora.py
 ```python
 # Em python
-import calculadora
-import ultilidades
-print("--- TESTE CALCULADORA ---")
-print(f"Somar 10 + 5: {calculadora.somar(10, 5)}")
-print(f"Dividir 10 / 2: {calculadora.dividir(10, 2)}")
-print(f"Dividir 10 / 0: {calculadora.dividir(10, 0)} (Tratado com sucesso!)")
+# SEÇÃO: FUNÇÕES DA CALCULADORA
 
-print("\n--- TESTE UTILIDADES ---")
-print(f"25°C para Fahrenheit: {ultilidades.celsius_para_fahrenheit(25)}°F")
-print(f"Senha '123' é válida? {ultilidades.validar_senha('123')}")
-print(f"Senha '123456' é válida? {ultilidades.validar_senha('123456')}")
+def somar(a, b):
+    return a + b
 
-# Testando Caixa com *precos
-total_compras = ultilidades.caixa_com_precos(19.90, 5.50, 100.00, 4.25)
-print(f"Total do Caixa (*precos): R$ {total_compras:.2f}")
+def subtrair(a, b):
+    return a - b
 
-# Testando Ficha do Aluno com **dados
-print(ultilidades.ficha_aluno(nome="Maria", idade=21, curso="Medicina", matricula="2026MED"))
+def multiplicar(a, b):
+    return a * b
 
-# Testando Lista Segura (Cópia Defensiva)
-lista_orig = ["Maçã", "Banana"]
-nova_list = ultilidades.lista_segura(lista_orig, "Laranja")
-print(f"Lista Original (Intacta): {lista_orig}")
-print(f"Nova Lista (Modificada): {nova_list}")
+def dividir(a, b):
+    if b == 0:
+        return None  # Retorna None sem quebrar a execução do programa
+    return a / b
 ```
 ```portugol
 // Em portugol
