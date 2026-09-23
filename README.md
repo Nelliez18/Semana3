@@ -26,7 +26,7 @@ nova_list = ultilidades.lista_segura(lista_orig, "Laranja")
 print(f"Lista Original (Intacta): {lista_orig}")
 print(f"Nova Lista (Modificada): {nova_list}")
 ```
-´´´portugol
+```portugol
 // SEÇÃO: FUNÇÕES DA CALCULADORA
 
 funcao real somar(real a, real b) {
@@ -49,6 +49,5 @@ funcao real dividir(real a, real b) {
         retorne a / b
     }
 }
-´´´
-
+```
 Módulo utilidades.py
