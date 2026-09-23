@@ -27,49 +27,27 @@ print(f"Lista Original (Intacta): {lista_orig}")
 print(f"Nova Lista (Modificada): {nova_list}")
 ```
 ´´´portugol
-// SEÇÃO: SCRIPT PRINCIPAL (EXECUÇÃO DIRETA)
-programa {
-    // Inclui a biblioteca de Texto para ajudar na simulação do código
-    inclua biblioteca Texto --> txt
+// SEÇÃO: FUNÇÕES DA CALCULADORA
 
-    funcao inicio() {
-        // --- TESTE CALCULADORA ---
-        escreva("--- TESTE CALCULADORA ---\n")
-        escreva("Somar 10 + 5: ", somar(10.0, 5.0), "\n")
-        escreva("Dividir 10 / 2: ", dividir(10.0, 2.0), "\n")
-        
-        real res_div_zero = dividir(10.0, 0.0)
-        se (res_div_zero == -99999.0) {
-            escreva("Dividir 10 / 0: Erro detectado (Tratado com sucesso!)\n")
-        } senao {
-            escreva("Dividir 10 / 0: ", res_div_zero, "\n")
-        }
+funcao real somar(real a, real b) {
+    retorne a + b
+}
 
-        // --- TESTE UTILIDADES ---
-        escreva("\n--- TESTE UTILIDADES ---\n")
-        escreva("25°C para Fahrenheit: ", celsius_para_fahrenheit(25.0), "°F\n")
-        escreva("Senha '123' é válida? ", validar_senha("123"), "\n")
-        escreva("Senha '123456' é válida? ", validar_senha("123456"), "\n")
+funcao real subtrair(real a, real b) {
+    retorne a - b
+}
 
-        // Testando Caixa com *precos (Simulado via Vetor)
-        real lista_precos[4] = {19.90, 5.50, 100.00, 4.25}
-        real total_compras = caixa_com_precos(lista_precos, 4)
-        escreva("Total do Caixa (*precos): R$ ", total_compras, "\n")
+funcao real multiplicar(real a, real b) {
+    retorne a * b
+}
 
-        // Testando Ficha do Aluno com **dados (Simulado via chamada direta estruturada)
-        ficha_aluno("Maria", 21, "Medicina", "2026MED")
-
-        // Testando Lista Segura (Cópia Defensiva de Vetores)
-        cadeia lista_orig[3] = {"Maçã", "Banana", ""}
-        cadeia nova_list[3]
-        
-        lista_segura(lista_orig, 2, nova_list, "Laranja")
-        
-        escreva("Lista Original (Intacta): [", lista_orig[0], ", ", lista_orig[1], "]\n")
-        escreva("Nova Lista (Modificada): [", nova_list[0], ", ", nova_list[1], ", ", nova_list[2], "]\n")
+funcao real dividir(real a, real b) {
+    se (b == 0.0) {
+        // Como Portugol não possui 'None', retornamos um valor padrão de erro absurdo
+        retorne -99999.0 
+    } senao {
+        retorne a / b
     }
-
-    // Coloque as funções dos códigos 2 e 3 aqui embaixo para rodar tudo junto!
 }
 ´´´
 
